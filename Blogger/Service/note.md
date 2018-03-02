@@ -8,20 +8,19 @@
 
 4.买买买
 
-![](https://github.com/XuZhuohao/studyNote-git-markdown-File-img/blob/master/Builderver/Buy.jpg?raw=true)
+![](https://raw.githubusercontent.com/XuZhuohao/studyNote-git-markdown-File-img/master/Builderver/Buy.jpg)
+
 
 ### 简单配置
 1.查看站内信
 
-![](https://github.com/XuZhuohao/studyNote-git-markdown-File-img/blob/master/Builderver/Mail.jpg?raw=true)
+![](https://raw.githubusercontent.com/XuZhuohao/studyNote-git-markdown-File-img/master/Builderver/Mail.jpg)
 
 2.根据提供的账号和密码连接服务器（以Xshell为例）
 
-![](https://github.com/XuZhuohao/studyNote-git-markdown-File-img/blob/master/Builderver/Xshell01.jpg?raw=true)
-
-![](https://github.com/XuZhuohao/studyNote-git-markdown-File-img/blob/master/Builderver/Xshell02.jpg?raw=true)
-
-![](https://github.com/XuZhuohao/studyNote-git-markdown-File-img/blob/master/Builderver/Xshell03.jpg?raw=true)
+![](https://raw.githubusercontent.com/XuZhuohao/studyNote-git-markdown-File-img/master/Builderver/Xshell01.jpg)  
+![](https://raw.githubusercontent.com/XuZhuohao/studyNote-git-markdown-File-img/master/Builderver/Xshell02.jpg)  
+![](https://raw.githubusercontent.com/XuZhuohao/studyNote-git-markdown-File-img/master/Builderver/Xshell03.jpg)  
 
 3.修改密码
 命令：*passwd*
