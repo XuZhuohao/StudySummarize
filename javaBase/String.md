@@ -150,4 +150,5 @@ t9 == t11 false
 String t1 = new String("A" + "B");
 String t2 = new String("AB");
 ```  
+
 上述代码中，t1 == t2返回true，编译器在编译过程中把"A"+"B"优化成"AB";
