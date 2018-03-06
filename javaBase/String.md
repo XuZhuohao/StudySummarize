@@ -142,8 +142,10 @@ t8 == t8.intern() false
 t9 == t11 false
 ```
 
-4.other
-**a.编译器优化**
+4.other  
+
+**a.编译器优化**  
+
 ```
 String t1 = new String("A" + "B");
 String t2 = new String("AB");
