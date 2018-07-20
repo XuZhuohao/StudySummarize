@@ -71,3 +71,9 @@ CP	放弃可用性，追求一致性和分区容错性，基本不会选择，�
 5.Hive 是构建在Hadoop 上的数据仓库。它提供了数据提取，数据随机查询和分析的功能  
 **在 Hadoop 核心框架中，MapReduce 常被称为 mapred，HDFS 经常被称为 dfs**  
 
+### MapReduce
+
+
+### HDFS
+
+
