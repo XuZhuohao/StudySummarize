@@ -36,3 +36,43 @@
 >
 > Safe Restart
 
+
+
+### 3.Jenkins 基础配置
+
+**配置全局安全属性**
+
+> 系统管理 --> 全局安全配置 -->  授权策略 --> 安全矩阵 添加新创建的用户
+
+**添加用户**
+
+>系统管理 --> 管理用户 --> 新建用户 --> 参照授权方法，授予出admin外所有全向
+
+
+
+### 4.应用部署服务器
+
+**安装并配置git**
+
+安装
+
+> [root@localhost jenkins]# yum -y install git
+
+配置
+
+> [root@localhost jenkins]# git config --global user.name "yui"
+> [root@localhost jenkins]# git config --global user.email "786725551@qq.com"
+
+生成秘钥
+
+> [root@localhost .ssh]# ssh-keygen -t rsa -C "786725551@qq.com"
+>
+> [root@localhost .ssh]# cd ~/.ssh/
+>
+> [root@localhost .ssh]# ls
+> id_rsa  id_rsa.pub
+
+github配置
+
+> login --> setting --> SSH AND GPG kyes
+
