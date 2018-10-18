@@ -46,28 +46,28 @@ validate 项目启动表结构进行校验 如果不一致则报错
 **再点ok**
 #### 1.4.2 配置数据源
 **多出选项卡 Persistence**
-![enter description here](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539852944889.png)
+![Persistence](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539852944889.png)
 **右键Generate Persistence Mapping -->By Database Schema**
-![enter description here](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853088528.png)
+![Import Database Schema](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853088528.png)
 
 **点击Import Database Schema 中的Choose Data Source 新建一个数据源**
 **在Data Sources and Drivers中新建一个数据源，这里我用的是mysql**
-![enter description here](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853254137.png)
+![Data Sources and Drivers](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853254137.png)
 **缺少驱动是点击下载**
-![enter description here](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853517384.png)
+![Drive Download](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853517384.png)
 
 **外部导入驱动如下**
-![enter description here](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853613534.png)
-![enter description here](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853595867.png)
+![Drive Link01](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853613534.png)
+![Drive Link02](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853595867.png)
 
 **这里我选择的是我maven仓库里的jar包**
-![enter description here](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853746931.png)
+![my drive](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853746931.png)
 #### 1.4.3 生成实体类
 **生成实体类配置**  
-![enter description here](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853954411.png)
+![at the end](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853954411.png)
 
 **大功告成**  
-![enter description here](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539854584128.png)
+![success](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539854584128.png)
 
 ## 2 代码实现
 
