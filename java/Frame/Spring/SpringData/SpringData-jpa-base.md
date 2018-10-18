@@ -28,10 +28,10 @@ spring:
 #### 1.2.2 说明
 **ddl-auto**
 
-create 启动时删数据库中的表，然后创建，退出时不删除数据表
-create-drop 启动时删数据库中的表，然后创建，退出时删除数据表 如果表不存在报错
-update 如果启动时表格式不一致则更新表，原有数据保留
-validate 项目启动表结构进行校验 如果不一致则报错
+create 启动时删数据库中的表，然后创建，退出时不删除数据表  
+create-drop 启动时删数据库中的表，然后创建，退出时删除数据表 如果表不存在报错  
+update 如果启动时表格式不一致则更新表，原有数据保留  
+validate 项目启动表结构进行校验 如果不一致则报错  
 
 **show-sql**
 是否在控制台显示执行操作的对应sql语句，默认为false
@@ -63,10 +63,10 @@ validate 项目启动表结构进行校验 如果不一致则报错
 **这里我选择的是我maven仓库里的jar包**
 ![enter description here](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853746931.png)
 #### 1.4.3 生成实体类
-**生成实体类配置**
+**生成实体类配置**  
 ![enter description here](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853954411.png)
 
-**大功告成**
+**大功告成**  
 ![enter description here](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539854584128.png)
 
 ## 2 代码实现
