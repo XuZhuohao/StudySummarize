@@ -65,9 +65,9 @@ validate 项目启动表结构进行校验 如果不一致则报错
 #### 1.4.3 生成实体类
 **生成实体类配置**
 ![enter description here](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853954411.png)
-**大功告成**
-![enter description here](https://markdown.xiaoshujiang.com/img/spinner.gif "[[[1539854009493]]]" )
 
+**大功告成**
+![enter description here](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539854584128.png)
 
 ## 2 代码实现
 
