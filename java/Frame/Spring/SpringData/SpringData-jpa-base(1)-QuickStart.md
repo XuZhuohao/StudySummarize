@@ -69,6 +69,66 @@ validate 项目启动表结构进行校验 如果不一致则报错
 **大功告成**  
 ![success](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539854584128.png)
 
-## 2 代码实现
+## 2.Quick Start
+(这里用由Entity到表举例)
+### 2.1 引入依赖和配置（见前面）
 
-### 2.1 
+### 2.2 构建Entity对象
+```
+package com.yui.study.springdatajpa.entity;
+
+import javax.persistence.Basic;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+
+/**
+ * 注解学习实体类
+ *
+ * @author XuZhuohao
+ * @date 2018/10/19
+ */
+@Setter
+@Getter
+@Entity
+public class AnnotationEntity {
+    @Id
+    private Long id;
+
+    @Basic(fetch = FetchType.LAZY, optional = false)
+    private String name;
+}
+```
+**@Setter @Getter:**
+这两个是 lombok 的注解，为属性提供get，set方法，直接写get set也一样
+### 2.3 构建Repository接口
+**根据不同的需求可以继承不同的Repository，或者扩展自己的Repository**  
+泛型传入实体类型，主键类型
+```
+package com.yui.study.springdatajpa.repository;
+
+import com.yui.study.springdatajpa.entity.AnnotationEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+/**
+ * Repository
+ *
+ * @author XuZhuohao
+ * @date 2018/10/19
+ */
+public interface AnnotationRepository extends JpaRepository<AnnotationEntity, Long> {
+}
+```
+### 2.4 测试代码
+```
+	@Autowired
+    private AnnotationRepository annotationRepository;
+
+    @Test
+    public void testQuickStart(){
+        AnnotationEntity annotationEntity = new AnnotationEntity();
+        annotationEntity.setId(1L);
+        annotationEntity.setName("test01");
+        annotationRepository.save(annotationEntity);
+    }
+```
