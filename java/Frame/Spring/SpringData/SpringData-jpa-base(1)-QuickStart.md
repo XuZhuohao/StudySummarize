@@ -42,32 +42,32 @@ validate 项目启动表结构进行校验 如果不一致则报错
 ### 1.4 从表结构生成实体类
 #### 1.4.1 添加项目jpa module
 **按下Ctrl+ Shift + Alt + S**
-![添加module](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539852635570.png)
+![添加module](https://raw.githubusercontent.com/XuZhuohao/picture/master/java/Frame/Spring/SpringData/1539852635570.png)
 **再点ok**
 #### 1.4.2 配置数据源
 **多出选项卡 Persistence**
-![Persistence](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539852944889.png)
+![Persistence](https://raw.githubusercontent.com/XuZhuohao/picture/master/java/Frame/Spring/SpringData/1539852944889.png)
 **右键Generate Persistence Mapping -->By Database Schema**
-![Import Database Schema](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853088528.png)
+![Import Database Schema](https://raw.githubusercontent.com/XuZhuohao/picture/master/java/Frame/Spring/SpringData/1539853088528.png)
 
 **点击Import Database Schema 中的Choose Data Source 新建一个数据源**
 **在Data Sources and Drivers中新建一个数据源，这里我用的是mysql**
-![Data Sources and Drivers](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853254137.png)
+![Data Sources and Drivers](https://raw.githubusercontent.com/XuZhuohao/picture/master/java/Frame/Spring/SpringData/1539853254137.png)
 **缺少驱动是点击下载**
-![Drive Download](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853517384.png)
+![Drive Download](https://raw.githubusercontent.com/XuZhuohao/picture/master/java/Frame/Spring/SpringData/1539853517384.png)
 
 **外部导入驱动如下**
-![Drive Link01](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853613534.png)
-![Drive Link02](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853595867.png)
+![Drive Link01](https://raw.githubusercontent.com/XuZhuohao/picture/master/java/Frame/Spring/SpringData/1539853613534.png)
+![Drive Link02](https://raw.githubusercontent.com/XuZhuohao/picture/master/java/Frame/Spring/SpringData/1539853595867.png)
 
 **这里我选择的是我maven仓库里的jar包**
-![my drive](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853746931.png)
+![my drive](https://raw.githubusercontent.com/XuZhuohao/picture/master/java/Frame/Spring/SpringData/1539853746931.png)
 #### 1.4.3 生成实体类
 **生成实体类配置**  
-![at the end](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539853954411.png)
+![at the end](https://raw.githubusercontent.com/XuZhuohao/picture/master/java/Frame/Spring/SpringData/1539853954411.png)
 
 **大功告成**  
-![success](https://www.github.com/XuZhuohao/studyNote-git-markdown-File-img/raw/master/ByDate/18/1539854584128.png)
+![success](https://raw.githubusercontent.com/XuZhuohao/picture/master/java/Frame/Spring/SpringData/1539854584128.png)
 
 ## 2.Quick Start
 (这里用由Entity到表举例)

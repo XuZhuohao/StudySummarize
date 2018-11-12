@@ -8,19 +8,19 @@
 
 4.买买买
 
-![](https://raw.githubusercontent.com/XuZhuohao/studyNote-git-markdown-File-img/master/Builderver/Buy.jpg)
+![](https://raw.githubusercontent.com/XuZhuohao/picture/master/Project/Blogger/Service/Buy.jpg)
 
 
 ### 简单配置
 1.查看站内信
 
-![](https://raw.githubusercontent.com/XuZhuohao/studyNote-git-markdown-File-img/master/Builderver/Mail.jpg)
+![](https://raw.githubusercontent.com/XuZhuohao/picture/master/Project/Blogger/Service/Mail.jpg)
 
 2.根据提供的账号和密码连接服务器（以Xshell为例）
 
-![](https://raw.githubusercontent.com/XuZhuohao/studyNote-git-markdown-File-img/master/Builderver/Xshell01.jpg)  
-![](https://raw.githubusercontent.com/XuZhuohao/studyNote-git-markdown-File-img/master/Builderver/Xshell02.jpg)  
-![](https://raw.githubusercontent.com/XuZhuohao/studyNote-git-markdown-File-img/master/Builderver/Xshell03.jpg)  
+![](https://raw.githubusercontent.com/XuZhuohao/picture/master/Project/Blogger/Service/Xshell01.jpg)  
+![](https://raw.githubusercontent.com/XuZhuohao/picture/master/Project/Blogger/Service/Xshell02.jpg)  
+![](https://raw.githubusercontent.com/XuZhuohao/picture/master/Project/Blogger/Service/Xshell03.jpg)  
 
 3.修改密码
 命令：*passwd*
