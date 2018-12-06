@@ -24,6 +24,7 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+	database-platform: org.hibernate.dialect.MySQL5InnoDBDialect # 指定为innodb引擎
 ```
 #### 1.2.2 说明
 **ddl-auto**
