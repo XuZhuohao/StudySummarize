@@ -335,7 +335,7 @@ org.hibernate.engine.jdbc.env.internal.QualifiedObjectNameFormatterStandardImpl.
 			return buff.toString();
 		}
 ```
-这里可以看到。。。只有判断 catalog ,也之拼接 catalog，对于 schema 没有进行处理
+这里可以看到。。。只有判断 catalog ,也只拼接 catalog，对于 schema 没有进行处理
 #### 3.2.6.2 **JPA 源码解读02**
 回到**MetadataBuildingProcess#complete** 的生成生成数据库基本数据类型的语句 final BasicTypeRegistry basicTypeRegistry = handleTypes( options ); 往里面走，一路走到 org.hibernate.engine.jdbc.env.internal.QualifiedObjectNameFormatterStandardImpl#QualifiedObjectNameFormatterStandardImpl(org.hibernate.engine.jdbc.env.spi.NameQualifierSupport, java.lang.String, boolean)
 
@@ -367,7 +367,7 @@ private Format buildFormat(
 ```
 
 这里其实就是根据 nameQualifierSupport 去选择不同的格式对象
-nameQualifierSupport 来着 org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentImpl#determineNameQualifierSupport 里面会调用通过 SPI 实现的数据库驱动程序实现的方法生成
+nameQualifierSupport 来自 org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentImpl#determineNameQualifierSupport 里面会调用通过 SPI 实现的数据库驱动程序实现的方法生成
 com.mysql.jdbc.DatabaseMetaData#supportsCatalogsInTableDefinitions
 com.mysql.jdbc.DatabaseMetaData#supportsSchemasInTableDefinitions
 所以吐血吐完= =
@@ -387,4 +387,4 @@ com.mysql.jdbc.DatabaseMetaData#supportsSchemasInTableDefinitions
 
 - org.hibernate.persister.entity.SingleTableEntityPersister#SingleTableEntityPersister 生成建表语句
 
-**对于mysql的驱动(和版本有关，这里使用5.0的) 使用 org.hibernate.engine.jdbc.env.internal.QualifiedObjectNameFormatterStandardImpl.CatalogNameFormat#format 进行格式化，只与 catalog 有关， 所以 @Table 中的 schema 取消啥值都没有影响=_=，至少从数据库建表语句上看是没有影响的。。。**
+**对于mysql的驱动(和版本有关，这里使用5.0的) 使用 org.hibernate.engine.jdbc.env.internal.QualifiedObjectNameFormatterStandardImpl.CatalogNameFormat#format 进行格式化，只与 catalog 有关， 所以 @Table 中的 schema 取啥值都没有影响=_=，至少从数据库建表语句上看是没有影响的。。。**
