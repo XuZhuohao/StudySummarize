@@ -1,12 +1,6 @@
-# aop to auto insert value of createBy or updateBy
-**CommonDataInject.java**  
-## 说明
-对数据库插入语句进行补充，插入语句时自动生成 createBy（来着 shiro 的用户管理）,createBy（当前时间）; 更新时自动生成 updateBy, createBy
-## 代码
-```
-package com.yui.study.aspectj;
+package com.bluemoon.finenter.framework.aspectj;
 
-import com.yui.study.domain.SysUser;
+import com.bluemoon.finenter.system.domain.SysUser;
 import org.apache.shiro.SecurityUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -85,10 +79,8 @@ public class CommonDataInject {
             // 可能发生异常：
             //      1.找不到对应的 set / get 方法；
             //      2.对应的 set 方法，入参类型与 value 类型不符合
-			//      3.没有对应的属性
+            //      3.没有对应的属性
             e.printStackTrace();
         }
     }
 }
-
-```
