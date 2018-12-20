@@ -32,14 +32,4 @@ public class PatternUtil {
         }
         return result;
     }
-
-    public static String getPatternFromChar(String result, String likeChars, List<String> likeCharsWithOuts){
-        //
-        String temp = likeCharsWithOuts.get(0);
-        for (char c : temp.toCharArray()) {
-
-        }
-        return null;
-    }
-
 }
