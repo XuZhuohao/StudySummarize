@@ -37,6 +37,10 @@ validate 项目启动表结构进行校验 如果不一致则报错
 **show-sql**
 是否在控制台显示执行操作的对应sql语句，默认为false
 
+**database-platform**
+由于使用 mysql 数据库，jpa 自动生成数据库表的引擎默认为 myisam，这里修改为常用的 innodb 引擎。
+
+
 ### 1.3 从实体类生成表结构
 配置文件的 ddl-auto 参数配置
 
