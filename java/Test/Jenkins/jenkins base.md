@@ -52,7 +52,7 @@
 
 ### 4.应用部署服务器
 
-**安装并配置git**
+**安装并配置 git**
 
 安装
 
@@ -76,3 +76,38 @@ github配置
 
 > login --> setting --> SSH AND GPG kyes
 
+**安装并配置 Maven**
+下载
+>wget http://mirrors.shu.edu.cn/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz
+>tar -zxvf apache-maven-3.6.0-bin.tar.gz -C /usr/
+>cd /usr
+>mv apache-maven-3.6.0/ apache-maven
+
+
+
+配置变量
+/etc/profile
+```
+export MAVEN_HOME=/usr/apache-maven
+export PATH=$MAVEN_HOME/bin:$PATH
+```
+> . /etc/profile
+
+
+**安装配置 tomcat**
+>wget http://mirrors.shu.edu.cn/apache/tomcat/tomcat-9/v9.0.14/bin/apache-tomcat-9.0.14.tar.gz
+>tar -zxvf apache-tomcat-9.0.14.tar.gz -C /usr/
+>cd /usr/
+>mv apache-tomcat-9.0.14/ apache-tomcat
+>cd apache-tomcat/
+>chmod a+x -R *
+
+修改端口
+vim conf/server.xml
+```
+<Connector port="8090" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+
+```
+启动验证
