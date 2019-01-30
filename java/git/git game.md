@@ -401,4 +401,73 @@ Here is a [link](https://help.github.com/articles/configuring-a-remote-for-a-for
 
 ```
 
+>[root@localhost git-game]# git checkout master
+
+```
+Switched to branch 'master'
+```
+
+>[root@localhost git-game]# git remote add upstream ```
+```
+https://github.com/drami025/git-game.git
+```
+>[root@localhost git-game]# git fetch upstream
+
+```
+remote: Enumerating objects: 38, done.
+Unpacking objects: 100% (38/38), done.
+remote: Total 38 (delta 0), reused 0 (delta 0), pack-reused 38
+From https://github.com/drami025/git-game
+ * [new branch]      master     -> upstream/master
+```
+
+>[root@localhost git-game]# git merge upstream/master
+
+```
+Updating d851edd..de79125
+Fast-forward
+ README.md | 51 +++++++++++++++++++++++++--------------------------
+ 1 file changed, 25 insertions(+), 26 deletions(-)
+```
+
+**README.md**
+
+``` markdown
+Git Game Finish Line
+==========
+
+If you did not update the main git-game repository, then we are disappointed in you!!
+=======
+
+However, if you did, then great Job!!
+You completed our Git Game!
+
+
+Well you:
+
+- viewed previous commits using "git log"
+- traversed to previous commits
+- checked out to different branches
+- ran "git blame" to see who made changes to a file
+- ran the diff command to see differences between branches
+- saw what .gitignore included and how it works
+- resolved merged conflicts
+- saw issues with naming tags and branches the same name
+- updated a local repository from a remote repository
+
+ Version control systems like git are extremely important tools to learn and use,
+ Especially when collaborating on projects with other developers.
+ It is our hope that you continue to practice your git skills so that you can one day become the ultimate git master!
+
+ Thanks for playing!
+
+ email gitgame.hgarc014@gmail.com with subject: “git-game completion” to get a badge of completion!!
+ please note you will not get a response from this email!
+
+ **Please allow up to 2 weeks for the badge to be delivered!!**
+ **I try to send badges as soon as possible, Thank You!!**
+```
+
+
+
 
