@@ -1,6 +1,6 @@
 # SpringData-Jpa-Base
 
-## 3 注解
+## 3 注解- Target Of TYPE
 **说明:** 对于实体类中属性的 Setter 和 Getter 均使用 lombok 注解实现
 
 ### 3.1 @Entity
@@ -121,11 +121,11 @@ Caused by: java.sql.SQLException: No database selected
 **总结：对于数据库连接来说，并不需要通过 url 指定连接的库名，可以通过指定连接的实例的地址和端口(没指定端口时默认使用 3306 )，再通过实体Entity 的 @Table 中的 catalog 来指定表对应的库即可，可以在同个实例下操作多个库(需要账号有库的权限)**
 
 
-### 3.2.5 schema
+#### 3.2.5 schema
 ***没有经过测试的想法都不可信= =，本小结内容纯属论证(而且是非演绎论证，哈哈哈)。。因为我不想搭建 oracle = =***
 
 
-### 3.2.6 catalog & schema
+#### 3.2.6 catalog & schema
 ```
 对于 oracle 来说
 我们可以会这么做：
