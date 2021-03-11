@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sekection Sort</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<style type="text/css"> 
+	* {list-style: none; }
+	#app *{margin-left: 10px}
+	ul {margin-top: 20px; margin-bottom: 20px}
+	ul li{float: left; width: 50px; border:1px solid blue; text-align: center; margin-left: 10px}
+	#op {margin-left: 70px;}
+	button {margin: 20px 10px 0px 20px; width: 70px;}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<ul id="data">
+		  <li v-for="item in arrayData" :key="item.message" :style="'background-color: ' + item.styleBackColor">
+		    {{ item.theValue }}
+		  </li>
+		</ul>
+		<br style="clear: both;" />
+		<span id="op">
+			<button v-on:click="dynamic">{{startButton.text}}</button>
+			<input type="text" :placeholder="'演示速度，默认' + dynamicData.stepSpeed" v-model="dynamicData.stepSpeed">
+			<button v-on:click="nextStep">下一步</button>
+			<button v-on:click="initedData">结束</button>
+		</span>
+	</div>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#app',
+  			// 选项
+  			data: {
+  				arrayData:[
+  				{styleBackColor:"#ffffff", theValue: 3},
+				{styleBackColor:"#ffffff", theValue: 2},
+				{styleBackColor:"#ffffff", theValue: 4},
+				{styleBackColor:"#ffffff", theValue: 5},
+				{styleBackColor:"#ffffff", theValue: 1},
+				{styleBackColor:"#ffffff", theValue: 6},
+				{styleBackColor:"#ffffff", theValue: 9},
+				{styleBackColor:"#ffffff", theValue: 7},
+				{styleBackColor:"#ffffff", theValue: 8}
+  				],
+  				inited:"#ffffff",
+  				selected: "#ac80ce",
+  				changed: "#60d8da",
+  				dynamicData:{stepSpeed:100, timeMethod:null},
+  				selectionData: { firstIndex: -1, smallestIndex: 0, smallestValue:0},
+  				stepCnt: 1,
+  				isEnd: false,
+  				startButton:{text:"开始", type:1}
+  				
+  			},
+  			methods:{
+  				findNextSmallest:function(){
+  					if (this.selectionData.firstIndex == this.arrayData.length -1) {
+  						this.isEnd = true
+  						return;
+  					}
+  					this.selectionData.smallestIndex = ++this.selectionData.firstIndex;
+  					this.selectionData.smallestValue = this.arrayData[this.selectionData.firstIndex].theValue;
+  					for (var i = this.selectionData.firstIndex + 1; i < this.arrayData.length; i++) {
+  						if(this.selectionData.smallestValue > this.arrayData[i].theValue){
+  							this.selectionData.smallestValue = this.arrayData[i].theValue;
+  							this.selectionData.smallestIndex = i;
+  						}
+  					}
+  					this.arrayData[this.selectionData.smallestIndex].styleBackColor = this.selected;
+  				},
+  				beginChange:function(){
+  					let temp = this.arrayData[this.selectionData.smallestIndex];
+  					console.log(temp)
+  					this.arrayData[this.selectionData.smallestIndex] = this.arrayData[this.selectionData.firstIndex];
+  					console.log(temp)
+  					this.arrayData[this.selectionData.firstIndex] = temp;
+  					this.arrayData[this.selectionData.smallestIndex].styleBackColor = this.selected;
+  				},
+  				afterChanged:function(){
+  					this.arrayData[this.selectionData.smallestIndex].styleBackColor = this.inited;
+  					this.arrayData[this.selectionData.firstIndex].styleBackColor = this.changed;
+  				},
+  				nextStep:function(){
+  					if (this.isEnd) {return;}
+  					let step= this.stepCnt% 3;
+  					if (step == 1) {
+  						this.findNextSmallest();
+  					} else if (step == 2) {
+  						this.beginChange();
+  					} else {
+  						this.afterChanged();
+  					}
+  					this.stepCnt++;
+  				},
+  				dynamic: function(){
+  					console.log(this.startButton.type);
+  					if (this.startButton.type == 1) {
+  						console.log(1);
+  						this.dynamicData.timeMethod = setInterval(()=>{this.nextStep();}, this.dynamicData.stepSpeed);
+  						this.startButton.text = "结束";
+  						this.startButton.type = 2;
+  					} else {
+  						console.log(2);
+  						clearInterval(this.dynamicData.timeMethod);
+  						this.startButton.text = "开始";
+  						this.startButton.type = 1;
+  					}  					
+  				},
+  				initedData:function(){
+  					this.arrayData= [
+		  				{styleBackColor:"#ffffff", theValue: 3},
+						{styleBackColor:"#ffffff", theValue: 2},
+						{styleBackColor:"#ffffff", theValue: 4},
+						{styleBackColor:"#ffffff", theValue: 5},
+						{styleBackColor:"#ffffff", theValue: 1},
+						{styleBackColor:"#ffffff", theValue: 6},
+						{styleBackColor:"#ffffff", theValue: 9},
+						{styleBackColor:"#ffffff", theValue: 7},
+						{styleBackColor:"#ffffff", theValue: 8}
+		  				];
+
+		  			this.stepSpeed= 1;
+	  				this.dynamicData={stepSpeed:1, timeMethod:null};
+	  				this.selectionData= { firstIndex: -1, smallestIndex: 0, smallestValue:0};
+	  				this.stepCnt= 1;
+	  				this.isEnd= false;
+	  				this.startButton={text:"开始", type:1};
+  				},
+  			}
+		})
+
+
+	</script>
+</body>
+</html>
